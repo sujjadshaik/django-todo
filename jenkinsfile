@@ -14,7 +14,7 @@ pipeline{
         }
         stage('install requirements'){
             steps{
-                sh 'pip3 install requirements.txt'
+                sh 'pip3 install -r requirements.txt'
             }
         }
         stage('Unit testing'){
