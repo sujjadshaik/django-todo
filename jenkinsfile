@@ -12,9 +12,9 @@ pipeline{
                 checkout scm
             }
         }
-        stage('check version'){
+        stage('install requirements'){
             steps{
-                sh 'python --version'
+                sh 'pip install requirements.txt'
             }
         }
 
