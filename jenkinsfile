@@ -1,7 +1,7 @@
 pipeline{
     agent{
         docker{
-            image 'python:3.6-alpine3.12'
+            image 'python:3.5.1'
             args '-u root:root'
 
         }
@@ -12,6 +12,12 @@ pipeline{
                 checkout scm
             }
         }
+        stage('check version'){
+            steps{
+                sh 'pyhton --version'
+            }
+        }
 
     }
+    
 }
